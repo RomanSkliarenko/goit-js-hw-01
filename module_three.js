@@ -17,13 +17,13 @@ let message;
 
 
 const passwordInput = prompt('Введите пароль');
-if(passwordInput === ADMIN_PASSWORD) {
-  message = 'Добро пожаловать!';
-} 
-else if(passwordInput === null) {
+if(!passwordInput) {
   message = 'Отменено пользователем!';
  }
-else if(passwordInput !== ADMIN_PASSWORD) {
+else if(passwordInput === ADMIN_PASSWORD) {
+  message = 'Добро пожаловать!';
+} 
+else {
   message = 'Доступ запрещен, неверный пароль!';
 }
 console.log(passwordInput)

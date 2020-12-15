@@ -17,32 +17,31 @@ let countrie = '';
 let price;
 
 let select = prompt('Введите название страны, куда нужна доставка');
-select = select.toLowerCase();
-console.log(select);
-
-switch(select){
-  case 'китай' :
-  countrie = 'Китай'; 
-  price = '100 кредитов';
-  break;
-  case 'чили' :
-  countrie = 'Чили'; 
-  price = '250 кредитов';
-  break;
-  case 'австралия' :
-  countrie = 'Австралия'; 
-  price = '170 кредитов';
-  break;
-  case 'индия' :
-  countrie = 'Индия'; 
-  price = '80 кредитов';
-  break;
-  case 'ямайка' :
-  countrie = 'Ямайка'; 
-  price = '120 кредитов';
-  break;
- 
-  default : alert('В вашей стране доставка не доступна')
-};
-alert(`Доставка в ${countrie} будет стоить ${price} кредитов`);
-console.log(price);
+if(select !== null) {
+  select = select.toLowerCase();
+  switch(select){
+    case 'китай' :
+    countrie = 'Китай'; 
+    price = '100 кредитов';
+    break;
+    case 'чили' :
+    countrie = 'Чили'; 
+    price = '250 кредитов';
+    break;
+    case 'австралия' :
+    countrie = 'Австралия'; 
+    price = '170 кредитов';
+    break;
+    case 'индия' :
+    countrie = 'Индия'; 
+    price = '80 кредитов';
+    break;
+    case 'ямайка' :
+    countrie = 'Ямайка'; 
+    price = '120 кредитов';
+    break;
+   
+    default : alert('В вашей стране доставка не доступна')
+  };
+}
+price ? alert(`Доставка в ${countrie} будет стоить ${price} кредитов`) : '';

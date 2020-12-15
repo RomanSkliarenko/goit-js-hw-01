@@ -30,6 +30,6 @@ if(!amountDroid){
 else if(totalPrise > credits){
   alert('Недостаточно средств на счету!')
 }
-else if(amountDroid && credits >= totalPrise){
+else {
   alert(`Вы купили ${amountDroid} дроидов, на счету осталось ${balance} кредитов.`)
 }
